@@ -4,6 +4,7 @@ import axios from "axios";
 import Search from "./components/Search";
 import Results from "./components/Results";
 import Popup from "./components/Popup";
+import Pagination from "./components/Pagination";
 
 function App() {
   const [state, setState] = useState({
@@ -25,6 +26,12 @@ function App() {
       });
     }
   };
+
+  // const pagination = () => {
+  //   axios(apiurl + "&s=" + state.s + "&page=2").then(({ data }) => {
+  //     console.log(data);
+  //   });
+  // };
 
   const handleInput = e => {
     let s = e.target.value;
