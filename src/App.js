@@ -12,9 +12,11 @@ function App() {
     selected: {}
   });
 
+  const apiurl = "https://omdbapi.com/?apikey=dcedfc78";
+
   const search = e => {
     if (e.key === "Enter") {
-      axios("//omdbapi.com/?apikey=dcedfc78&s=" + state.s).then(({ data }) => {
+      axios(apiurl + "&s=" + state.s).then(({ data }) => {
         let results = data.Search;
 
         setState(prevState => {
