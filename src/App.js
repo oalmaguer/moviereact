@@ -14,15 +14,13 @@ function App() {
 
   const search = e => {
     if (e.key === "Enter") {
-      axios("https://omdbapi.com/?apikey=dcedfc78&s=" + state.s).then(
-        ({ data }) => {
-          let results = data.Search;
+      axios("//omdbapi.com/?apikey=dcedfc78&s=" + state.s).then(({ data }) => {
+        let results = data.Search;
 
-          setState(prevState => {
-            return { ...prevState, results: results };
-          });
-        }
-      );
+        setState(prevState => {
+          return { ...prevState, results: results };
+        });
+      });
     }
   };
 
