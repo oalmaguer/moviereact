@@ -6,7 +6,20 @@
 
 body {
   font-family: "montserrat", sans-serif;
-  background-color: #223343;
+  background-image: url(./tableImage.jpg);
+  background-position: 0px 0px;
+  background-repeat: repeat-y;
+  animation: animatedBackground 27s linear infinite;
+  background-color: #dddddd;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }
 
 header {
@@ -18,6 +31,7 @@ header h1 {
   font-size: 48px;
   font-weight: 500px;
   text-align: center;
+  text-shadow: 5px 5px #000000;
 }
 
 main {
@@ -47,7 +61,7 @@ section {
 }
 
 .searchbox:focus {
-  box-shadow: 0px 0px 8px 3px #4484c4;
+  box-shadow: 0px 0px 8px 3px #e24848;
 }
 
 .results {
@@ -75,23 +89,23 @@ section {
   font-size: 20px;
   font-weight: 600;
   padding: 10px;
-  background: #445565;
+  background: #e24848;
   flex: 1 1 100%;
   transition: 0.4s ease-out;
 }
 
 .results .result:hover h3 {
   background: #fff;
-  color: #223343;
+  color: #e24848;
 }
 
 .popup {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #445565;
+  top: 10%;
+  left: 10%;
+  width: 80vw;
+  height: 80vh;
+  background-color: #f1f1f1;
   overflow-y: scroll;
 }
 
@@ -102,21 +116,22 @@ section {
   margin: 0 auto;
   padding: 25px;
 
-  color: #fff;
+  color: #000000;
 }
 
-.poput .content h2 {
-  font-size: 28px;
-  font-weight: 600;
+.popup .content h2 {
+  font-size: 30px;
+  font-weight: 300;
 }
 
 .popup .content h2 span {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .popup .content .rating {
   margin-bottom: 30px;
+  color: #000000;
 }
 
 .popup .content .plot {
@@ -128,7 +143,8 @@ section {
 .popup .content .plot img {
   flex: 1 1 50%;
   max-width: 300px;
-  padding: 0px 15px;
+  padding: 0px 0px;
+  border: 5px solid black;
 }
 
 .popup .content .plot p {
