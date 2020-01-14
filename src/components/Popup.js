@@ -6,7 +6,6 @@ function Popup({ selected, closePopup }) {
       <div className="content">
         <h2>
           {selected.Title} <span>({selected.Year})</span>
-          <p className="rating">Rating: {selected.Rating}</p>
           <div className="plot">
             <img src={selected.Poster} />
             <p>{selected.Plot}</p>
